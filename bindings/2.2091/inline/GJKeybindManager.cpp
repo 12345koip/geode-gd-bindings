@@ -3,6 +3,8 @@
 #include <cstring>
 
 #if defined(GEODE_IS_WINDOWS)
+#include <unordered_set>
+
 GJKeybindManager::~GJKeybindManager() {
     *reinterpret_cast<GJKeybindManager**>(geode::base::get() + 0x90c000) = nullptr;
 }
