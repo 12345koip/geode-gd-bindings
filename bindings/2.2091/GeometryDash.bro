@@ -5369,7 +5369,7 @@ class EditorWindowPopup : SetupTriggerPopup {
     TodoReturn fieldHoldsKeys();
     TodoReturn getResizeCorner(cocos2d::CCPoint) = imac 0x900a00, m1 0x7e7d60;
     bool isInDragHandle(cocos2d::CCPoint);
-    void layoutWindow() = win 0x17e520;
+    void layoutWindow() = win 0x17e520, imac 0x9006b0, m1 0x7e7ad8;
     TodoReturn moveWindowTo(cocos2d::CCPoint);
     void setLockAspectRatio(bool);
     void setWindowScaleBounds(float, float);
@@ -5748,7 +5748,7 @@ class EmotePickerPopup : EditorWindowPopup {
     bool init(CCTextInputNode* input, cocos2d::CCPoint position, int maxEmotes, int maxLength) = win 0x123970, imac 0x902680, m1 0x7e96b8;
     void layoutEmoteGrid() = win 0x124050, imac 0x9034d0, m1 0x7ea548;
     void onPickEmote(cocos2d::CCObject* sender) = win 0x124780;
-    void refreshEnabled() = win 0x124640;
+    void refreshEnabled() = win 0x124640, imac 0x902d30, m1 0x7e9d00;
 
     CCTextInputNode* m_input;
     int m_maxEmotes;
