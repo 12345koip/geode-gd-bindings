@@ -5340,7 +5340,7 @@ class EditorUI : cocos2d::CCLayer, FLAlertLayerProtocol, ColorSelectDelegate, GJ
 
 [[link(android)]]
 class EditorWindowPopup : SetupTriggerPopup {
-    EditorWindowPopup() = win 0x123530, m1 0x7cb6ec, imac 0x8def40;
+    EditorWindowPopup() = win 0x123530, m1 0x7cb6ec, imac 0x8def40, ios 0x4d89a8;
 
     virtual void onExit() = win 0x17fcc0, imac 0x902190, m1 0x7e92bc, ios 0x4dabc8;
     virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event) = win 0x17eca0, imac 0x900ff0, m1 0x7e8294, ios 0x4da088;
@@ -5357,26 +5357,26 @@ class EditorWindowPopup : SetupTriggerPopup {
     virtual void onFieldEnter() = win 0x17fc70, imac 0x9020d0, m1 0x7e9204, ios 0x4dab5c;
     bool initWindow(EditorUI* editorUI, float width, float height, int windowID, int unused) = win 0x17dde0, imac 0x8ffeb0, m1 0x7e73f4, ios 0x4d92e8;
     bool beginTouch(cocos2d::CCTouch* touch, cocos2d::CCEvent* event) = win 0x17edd0, imac 0x901160, m1 0x7e83dc;
-    bool isInCloseButton(cocos2d::CCPoint point) = win 0x17e7f0, m1 0x7e7e60, imac 0x900b10;
+    bool isInCloseButton(cocos2d::CCPoint point) = win 0x17e7f0, m1 0x7e7e60, imac 0x900b10, ios 0x4d9cb0;
 
     TodoReturn activeField();
-    void applyWindowSize() = win 0x17e6d0, imac 0x9005e0, m1 0x7e7a20;
-    void blurField() = win 0x17ec40;
-    cocos2d::CCPoint clampWindowCenter(cocos2d::CCPoint) = win 0x17e930;
-    cocos2d::CCPoint clampWindowOnScreen(cocos2d::CCPoint) = win 0x17eaa0, m1 0x7e7fdc;
-    TodoReturn contentCenter();
-    void dismissDropdowns() = win 0x17e420;
+    void applyWindowSize() = win 0x17e6d0, imac 0x9005e0, m1 0x7e7a20, ios 0x4d98f8;
+    void blurField() = win 0x17ec40, ios 0x4d9fe8;
+    cocos2d::CCPoint clampWindowCenter(cocos2d::CCPoint) = win 0x17e930, ios 0x4d97f8;
+    cocos2d::CCPoint clampWindowOnScreen(cocos2d::CCPoint) = win 0x17eaa0, m1 0x7e7fdc, ios 0x4d9e2c;
+    cocos2d::CCPoint contentCenter() = ios 0x4d97b0;
+    void dismissDropdowns() = win 0x17e420, ios 0x4d9b00;
     TodoReturn fieldHoldsKeys();
-    TodoReturn getResizeCorner(cocos2d::CCPoint) = imac 0x900a00, m1 0x7e7d60;
-    bool isInDragHandle(cocos2d::CCPoint);
-    void layoutWindow() = win 0x17e520, imac 0x9006b0, m1 0x7e7ad8;
-    TodoReturn moveWindowTo(cocos2d::CCPoint);
+    int getResizeCorner(cocos2d::CCPoint) = imac 0x900a00, m1 0x7e7d60, ios 0x4d9bc0;
+    bool isInDragHandle(cocos2d::CCPoint) = ios 0x4d9db0;
+    void layoutWindow() = win 0x17e520, imac 0x9006b0, m1 0x7e7ad8, ios 0x4d99b0;
+    void moveWindowTo(cocos2d::CCPoint) = ios 0x4d9b98;
     void setLockAspectRatio(bool);
-    void setWindowScaleBounds(float, float);
+    void setWindowScaleBounds(float, float) = ios 0x4d9af4;
     void setWindowSizeBounds(float, float, float, float) = ios 0x4d9ae0;
-    void syncWindowCenter() = win 0x17e4a0;
-    TodoReturn touchIsOnField(cocos2d::CCPoint);
-    TodoReturn touchRect();
+    void syncWindowCenter() = win 0x17e4a0, ios 0x4d9b3c;
+    bool touchIsOnField(cocos2d::CCPoint) = ios 0x4d9f5c;
+    cocos2d::CCRect touchRect() = ios 0x4da038;
 
     EditorUI* m_editorUI;
     cocos2d::extension::CCScale9Sprite* m_background;
